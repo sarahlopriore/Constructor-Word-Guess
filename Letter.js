@@ -1,12 +1,12 @@
 function Letter(character, guessed) {
     this.character = character;
     this.guessed = guessed;
-    this.userGuess = function() {
+    this.toString = function() {
         if (!this.guessed) {
-            console.log("_");
+            // console.log("_");
             return "_";
         } else {
-            console.log(this.character);
+            // console.log(this.character);
             return this.character;
         }
     };
@@ -21,7 +21,5 @@ function Letter(character, guessed) {
     }
 };
 
-var a = new Letter("a", false);
 
-a.correctGuess("b");
-a.userGuess();
+module.exports = Letter;
